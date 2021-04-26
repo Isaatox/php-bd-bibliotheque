@@ -28,6 +28,7 @@ include_once('close.php');
 <div class="container">
     <div class="row">
 
+<section class="col-12">
 <?php
 if (!empty($_SESSION['error'])) {
 ?>
@@ -51,22 +52,26 @@ if (!empty($_SESSION['Message'])) {
 
     <h1>Liste des types de livres</h1>
     <table class="table">
-    <thead>
+<thead>
     <th>ID</th>
     <th>Libellé</th>
-    </thead>
+    <th>Actions</th>
+</thead>
     <?php  
     foreach ($resultat as $type) {
     ?>  
         <tr>
         <td><?php print($type['id']); ?></td>
         <td><?php print($type['libelle']); ?></td>
+        <td><a href="details.php?id=<?php print($type['id']); ?>">Voir</a> Modifier Supprimer</td>
         </tr>
     <?php
        }
     ?>
     </table>
 
+       <a href="add.php" class="btn btn-primary">Ajouter un type</a>
+        </section>
     </div>
 </div>
 
