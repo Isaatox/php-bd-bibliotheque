@@ -67,7 +67,7 @@ if ( (isset($_GET['id'])) && !empty($_GET['id'])) {
         <p>ID : <span class="badge bg-secondary"> <?php print($id); ?></span></p>
         <p>Libellé :  <span class="badge bg-secondary"><?php print($label); ?></span></p>
         <p>
-        <a class="btn btn-primary" href='edit.php?id=<?php print($id); ?>'>Modifier</a><br><br>
+        <a class="btn btn-primary" href='edit.php?Id=<?php print($id); ?>'>Modifier</a><br><br>
         <a class="btn btn-secondary" href='index.php'>Retour à la liste</a><br>
         </p>
         </section>

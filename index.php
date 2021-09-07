@@ -63,7 +63,9 @@ if (!empty($_SESSION['Message'])) {
         <tr>
         <td><?php print($type['id']); ?></td>
         <td><?php print($type['libelle']); ?></td>
-        <td><a href="details.php?id=<?php print($type['id']); ?>">Voir</a> Modifier Supprimer</td>
+        <td><a class="btn btn-primary" href="details.php?id=<?php print($type['id']); ?>">Voir</a>
+            <a class="btn btn-info" href="edit.php?Id=<?php print($type['id']); ?>&libelle=<?php print($type['libelle']); ?>">Modifier</a>
+            <a class="btn btn-danger" href="delet.php?Id=<?php print($type['id']); ?>">Supprimer</a></td>
         </tr>
     <?php
        }
